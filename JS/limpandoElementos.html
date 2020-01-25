@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aulas de JS | Rocketseat</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" id="nome">
+    </div>
+    
+    <script>
+        var linkElement = document.createElement('a');
+
+        //Criar Elemento HTML, nesse caso a <a>
+        linkElement.setAttribute('href', 'https://www.google.com');
+        linkElement.setAttribute('target', '_blanck');
+
+        //Criar texto para essa tag
+        var textElement = document.createTextNode('Acessar Site');
+
+        //deicar a variavel de texto como filho da variavel da tag
+        linkElement.appendChild(textElement);
+
+        //Jogar isso dentro do html
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElement);
+
+        //Para tirar um elemento do html, você deve amarzena-lo dentro de uma variavel, e depois removelo.
+        var inputElement = document.querySelector('#nome');
+
+        //Agora basta eu usar a variavel que tem o Id App como referencia e remove-lo
+        containerElement.removeChild(inputElement);
+    </script>
+</body>
+</html>
