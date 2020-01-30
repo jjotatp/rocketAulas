@@ -12,11 +12,20 @@
     <div id="app"></div>
 
     <script>
+        //Crie uma função que dado um intervalo (entre x e y) exiba todos número pares
         function pares(x, y) {
-
+            //Enquanto X menos ou igual a Y, faça essa repetição:
+            //Se o resto da visã de X com 2 for 0, coloque me tela.
+            while (x <= y) {
+                x++;
+                if (x % 2 == 0) {
+                    console.log(x);
+                }
+            }
         }
 
-        pares(32, 321);
+        var resposta = pares(32, 321);
+        console.log(resposta);
     </script>
 </body>
 

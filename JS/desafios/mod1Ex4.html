@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 1 - Exercício 4</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        //Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+
+        function experiencia(anos) {
+            if ((anos > 0) && (anos <= 1)) {
+                console.log("Iniciante");
+            }
+            if ((anos > 1) && (anos <= 3)) {
+                console.log("Intermediário");
+            }
+            if ((anos > 3) && (anos <= 6)) {
+                console.log("Avançado");
+            } else {
+                console.log("Jedi Master");
+            }
+        }
+
+        var anosEstudo = 1;
+        experiencia(anosEstudo);
+    </script>
+</body>
+
+</html>
