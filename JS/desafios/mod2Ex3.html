@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 2 - Exercício 3</title>
+</head>
+
+<body>
+    <div id="app">        
+    </div>
+
+    <script>
+        //A partir do vetor
+        //Preencha uma lista (<ul>) no HTML com os itens da seguinte formakey: "value", 
+        
+        var containerElement = document.querySelector('#app');
+        var listElement = document.createElement('ul');
+
+        containerElement.appendChild(listElement);
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        
+        function listaNomes(){
+            for (nome of nomes) {
+                var itemList = document.createElement('li');
+                var textItem = document.createTextNode(nome);
+                
+                itemList.appendChild(textItem);
+                listElement.appendChild(itemList);
+            }
+        }
+
+        listaNomes();
+
+
+    </script>
+</body>
+
+</html>

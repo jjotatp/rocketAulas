@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 2 - Exercício 2</title>
+</head>
+
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script>
+        //Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de 
+        //algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+
+        //Variavel que localiza o Id App
+        var containerElement = document.querySelector('#app');
+        
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        var newColor = getRandomColor(); // #E943F1
+
+        var box = document.createElement('div');
+        containerElement.appendChild(box);
+
+        box.setAttribute('class', 'box');
+
+        box.style.marginTop = '10px';
+        box.style.width = '100px';
+        box.style.height = '100px';
+        box.style.backgroundColor = '#f00';
+
+        box.onmouseover = function(){
+            box.style.backgroundColor = newColor;
+        }
+    </script>
+</body>
+
+</html>

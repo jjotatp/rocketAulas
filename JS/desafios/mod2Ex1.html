@@ -19,22 +19,23 @@
         //vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
         //aparecer na tela.
 
+        //Variavel que localiza o Id App
         var containerElement = document.querySelector('#app');
+        //Variavel para o botão
+        var buttonElement = document.querySelector('button');
 
-        function quadrado() {
+        //Quano clicado o botão ele entra na função
+        buttonElement.onclick = function quadrado() {
             var box = document.createElement('div');
-            box.appendChild(containerElement);
+            containerElement.appendChild(box);
 
-            box.setAttribute('class', '.box');
+            box.setAttribute('class', 'box');
 
             box.style.marginTop = '10px';
             box.style.width = '100px';
             box.style.height = '100px';
             box.style.backgroundColor = '#f00';
-
         }
-
-        console.log(quadrado());
     </script>
 </body>
 
