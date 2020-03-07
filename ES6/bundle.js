@@ -29,19 +29,12 @@
 //=============================================
 //Exercíio 2
 //=============================================
-var usuarios = [{
-  nome: 'Diego',
-  idade: 23,
-  empresa: 'Rocketseat'
-}, {
-  nome: 'Gabriel',
-  idade: 15,
-  empresa: 'Rocketseat'
-}, {
-  nome: 'Lucas',
-  idade: 30,
-  empresa: 'Facebook'
-}]; // const idade = usuarios.map(function (idd) {
+// const usuarios = [
+// 	{ nome: 'Diego', idade: 23, empresa: 'Rocketseat' },
+//  	{ nome: 'Gabriel', idade: 15, empresa: 'Rocketseat' },
+//  	{ nome: 'Lucas', idade: 30, empresa: 'Facebook' },
+// ];
+// const idade = usuarios.map(function (idd) {
 // 	return idd.idade;
 // });
 // console.log(idade);
@@ -53,10 +46,45 @@ var usuarios = [{
 // 	return arr.empresa == "Google";
 // });
 // console.log(google);
-
-var ex4 = usuarios.map(function (user) {
-  return user.idade * 2;
-}).filter(function (user) {
-  return user.idade <= 50;
+// const ex4 = usuarios
+// 	.map(user => ({ ...user, idade: user.idade * 2}))
+// 	.filter(user => user.idade <= 50);
+// console.log(ex4);
+//=============================================
+//Exercíio 3
+//=============================================
+// 3.1
+var arr = [1, 2, 3, 4, 5];
+var newarr = arr.map(function (item) {
+  return item + 10;
 });
-console.log(ex4);
+console.log(newarr); // 3.2
+
+var usuario = {
+  nome: 'Diego',
+  idade: 23
+};
+
+var mostraIdade = function mostraIdade(usuario) {
+  return usuario.idade;
+};
+
+console.log(mostraIdade(usuario)); // 3.3
+
+var nome = "Diego";
+var idade = 23;
+
+var mostraUsuario = function mostraUsuario() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+};
+
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome)); // 3.4
+// const promise => ({new Promise => (resolve, reject) resolve())
+// });
+//I DON'T KNOW!!!!!!!!!!

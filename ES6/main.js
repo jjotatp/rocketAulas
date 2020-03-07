@@ -35,11 +35,11 @@
 //=============================================
 //Exercíio 2
 //=============================================
-const usuarios = [
-	{ nome: 'Diego', idade: 23, empresa: 'Rocketseat' },
- 	{ nome: 'Gabriel', idade: 15, empresa: 'Rocketseat' },
- 	{ nome: 'Lucas', idade: 30, empresa: 'Facebook' },
-];
+// const usuarios = [
+// 	{ nome: 'Diego', idade: 23, empresa: 'Rocketseat' },
+//  	{ nome: 'Gabriel', idade: 15, empresa: 'Rocketseat' },
+//  	{ nome: 'Lucas', idade: 30, empresa: 'Facebook' },
+// ];
 
 // const idade = usuarios.map(function (idd) {
 // 	return idd.idade;
@@ -59,13 +59,49 @@ const usuarios = [
 
 // console.log(google);
 
-var ex4 =
-	usuarios.
-		map(function (user) {
-			return user.idade * 2;
-		})
-		.filter(function (user) {
-			return user.idade <= 50;
-});
+// const ex4 = usuarios
+// 	.map(user => ({ ...user, idade: user.idade * 2}))
+// 	.filter(user => user.idade <= 50);
 
-console.log(ex4);
+// console.log(ex4);
+
+//=============================================
+//Exercíio 3
+//=============================================
+
+// 3.1
+const arr = [1, 2, 3, 4, 5];
+
+const newarr = arr.map(item => item + 10);
+
+console.log(newarr);
+
+// 3.2
+const usuario = { nome: 'Diego', idade: 23 };
+
+const mostraIdade = (usuario) => {
+	return usuario.idade;
+}
+
+console.log(mostraIdade(usuario));
+
+// 3.3
+const nome = "Diego";
+const idade = 23;
+
+const mostraUsuario = (nome = 'Diego', idade = 18) => {
+ return { nome, idade };
+}
+
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome));
+
+// 3.4
+
+// const promise => ({new Promise => (resolve, reject) resolve())
+// });
+
+//I DON'T KNOW!!!!!!!!!!
+
+
+
